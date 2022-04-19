@@ -5,20 +5,54 @@
 
 public abstract class block {
     
-    block successor;
-    block predecessor; 
-    String date; 
-    String type; 
+    private block successor;
+    private block predecessor; 
+    private String date; 
+    private String type; 
 
     //constructor 
-    block(block s, block p, String d, String t)
+    block(Object[] attributes)
     {
 
-        successor = s;
-        predecessor = p;
-        date = d;
-        type = t;
+        this.successor = (block) attributes[0];
+        this.predecessor = (block) attributes[1];
+        this.date = (String) attributes [2];
+        this.type = (String) attributes [3];
 
     }
+
+    public block getPredecessor() {
+        return predecessor;
+    }
+
+    public block getSuccessor() {
+        return successor;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setPredecessor(block predecessor) {
+        this.predecessor = predecessor;
+    }
+
+    public void setSuccessor(block successor) {
+        this.successor = successor;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    
 
 }
