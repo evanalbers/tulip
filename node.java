@@ -8,7 +8,7 @@ public class node
     private String privateKey;
     public String publicKey;
 
-    private long balance = 0;
+    private static long balance = 0;
 
 
     //constructor 
@@ -21,10 +21,10 @@ public class node
     }
 
     //used to modify the balance of a node's tulips 
-    public modifyBalance(long change)
+    public static void modifyBalance(long change)
     {
 
-        balance += change;
+        node.balance += change;
 
     }
 
